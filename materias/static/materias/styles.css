@@ -1,0 +1,125 @@
+/* ======== ESTILO GENERAL ======== */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #e7fde3, #c9fbbb, #90caf9);
+    min-height: 100vh;
+    background-attachment: fixed;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 2.2rem;
+    color: #0d47a1;
+    text-shadow: 1px 1px 2px #ffffff70;
+}
+
+/* ======== TARJETAS ======== */
+.form-container, .table-container {
+    width: 70%;
+    margin: 30px auto;
+    padding: 25px;
+    background: #ffffffbb;
+    backdrop-filter: blur(4px);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    border: 1px solid #ffffff88;
+}
+
+h2 {
+    margin-top: 0;
+    color: #0d47a1;
+}
+
+/* ======== FORMULARIO ======== */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    color: #0d47a1;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #90caf9;
+    background: #e3f2fd;
+    outline: none;
+    transition: 0.3s;
+    font-size: 15px;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+    background: #ffffff;
+    border-color: #42a5f5;
+    box-shadow: 0 0 8px #42a5f560;
+}
+
+/* ======== BOTÓN ======== */
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    background: linear-gradient(135deg, #42a5f5, #1e88e5);
+    color: white;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    transition: transform .2s, box-shadow .2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    background: linear-gradient(135deg, #64b5f6, #2196f3);
+}
+
+/* ======== TABLA ======== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #ffffffcc;
+}
+
+th {
+    background: linear-gradient(135deg, #1e88e5, #1976d2);
+    color: white;
+    padding: 10px;
+    font-size: 15px;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #bbdefb;
+}
+
+tr:nth-child(even) {
+    background: #e3f2fdcc;
+}
+
+tr:hover {
+    background: #bbdefb;
+}
+
+/* ======== ALERTA DE ERROR ======== */
+.alert {
+    background: #ffebee;
+    color: #c62828;
+    border: 1px solid #ffcdd2;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}

@@ -1,0 +1,101 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Materias del Semestre Actual</title>
+
+    <link rel="stylesheet" href="{% static 'materias/styles.css' %}">
+</head>
+<body>
+
+<h1>Registro de Materias del Semestre Actual</h1>
+
+<div class="form-container">
+    <h2>Agregar nueva materia</h2>
+
+    <!-- Mensajes de error globales de JS -->
+    <div id="errores-form" class="alert" style="display:none;"></div>
+
+    <form method="post" id="form-materia">
+        {% csrf_token %}
+
+        <!-- CAMPO NOMBRE -->
+        <div class="form-group">
+            <label for="id_nombre">Nombre de la materia</label>
+            {{ form.nombre }}
+
+            {% if form.nombre.errors %}
+            <div id="id_nombre_error" class="errorlist">
+                {{ form.nombre.errors|striptags }}
+            </div>
+            {% endif %}
+        </div>
+
+        <!-- CAMPO COMENTARIO -->
+        <div class="form-group">
+            <label for="id_comentario">Comentario del semestre</label>
+            {{ form.comentario }}
+
+            {% if form.comentario.errors %}
+            <div id="id_comentario_error" class="errorlist">
+                {{ form.comentario.errors|striptags }}
+            </div>
+            {% endif %}
+        </div>
+
+        <!-- CAMPO SEMESTRE -->
+        <div class="form-group">
+            <label for="id_semestre">Semestre</label>
+            {{ form.semestre }}
+
+            {% if form.semestre.errors %}
+            <div id="id_semestre_error" class="errorlist">
+                {{ form.semestre.errors|striptags }}
+            </div>
+            {% endif %}
+        </div>
+
+        <button type="submit" class="btn">Guardar</button>
+    </form>
+</div>
+
+<div class="table-container">
+    <h2>Materias registradas</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Materia</th>
+                <th>Comentario</th>
+                <th>Semestre</th>
+                <th>Fecha de registro</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for m in materias %}
+            <tr>
+                <td>{{ m.nombre }}</td>
+                <td>{{ m.comentario }}</td>
+                <td>{{ m.semestre }}</td>
+                <td>{{ m.fecha_registro|date:"d/m/Y H:i" }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="4">No hay materias registradas aún.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<script src="{% static 'materias/scripts.js' %}"></script>
+</body>
+<p>
+    <a href="https://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:88px;height:31px"
+            src="https://jigsaw.w3.org/css-validator/images/vcss-blue"
+            alt="¡CSS Válido!" />
+    </a>
+</p>
+</html>
