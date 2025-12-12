@@ -11,5 +11,12 @@ class Materia(models.Model):
     def __str__(self):
         return f"{self.nombre} - {self.semestre}"
 
+    def get_clase_semestre(self):
+        """Retorna la clase CSS según si el semestre termina en -1 o no"""
+        if self.semestre.endswith('-1'):
+            return 'semestre-1'
+        else:
+            return 'semestre-2'
+
 
 # Create your models here.

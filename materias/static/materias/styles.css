@@ -86,7 +86,6 @@ textarea:focus {
 
 /* ======== TABLA ======== */
 table {
-    webkit-text-fill-color: #c9fbbb;
     width: 100%;
     border-collapse: collapse;
     border-radius: 10px;
@@ -124,13 +123,22 @@ tr:hover {
     margin-bottom: 15px;
     font-size: 14px;
 }
-/* ======== si exuste un registro  ======== */
-.semestre-1 {
-    color: green;
+/* ======== si existe un registro  ======== */
+tr.semestre-1 {
+    background-color: #000000 !important;
+    color: white;
+}
+
+tr.semestre-1 td {
+    color: white;
     font-weight: bold;
 }
 
-.semestre-2 {
+tr.semestre-2 {
+    background-color: green !important;
+}
+
+tr.semestre-2 td {
     color: black;
     font-weight: bold;
 } 

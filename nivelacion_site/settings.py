@@ -12,7 +12,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-k0d5o#gr!lsk%jig3ex(^5dfn0kxco50^me89-av-3lhn42o4l'
 
 # En Render debe ir en False
-DEBUG = False
+DEBUG = True
 
 # Mientras estás probando puedes dejar '*', luego lo ideal es poner solo tu dominio
 ALLOWED_HOSTS = ['*']
