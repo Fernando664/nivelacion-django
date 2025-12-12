@@ -76,12 +76,16 @@
         <tbody>
             {% for m in materias %}
             <tr>
+                
                 <td>{{ m.nombre }}</td>
                 <td>{{ m.comentario }}</td>
-                <td>{{ m.semestre }}</td>
+                 <tr class="{% if item.semestre.endswith '-1' %}semestre-1{% else %}semestre-2{% endif %}">
                 <td>{{ m.fecha_registro|date:"d/m/Y H:i" }}</td>
             </tr>
             {% empty %}
+   
+    </tr>
+{% endfor %}
             <tr>
                 <td colspan="4">No hay materias registradas aún.</td>
             </tr>
@@ -95,7 +99,7 @@
   document.querySelectorAll("table tbody tr").forEach(tr => {
     const semestre = tr.children[4].textContent.trim();
 
-    if (semestre === "2025-1") tr.style.color = "BLUE";
+    if (semestre === "2025-1") tr.style.color = "BLACK;
     if (semestre === "2025-2") tr.style.color = "green";
   });
 </script>
