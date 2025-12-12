@@ -124,3 +124,8 @@ tr:hover {
     margin-bottom: 15px;
     font-size: 14px;
 }
+/* ======== si exuste un registro  ======== */
+tr.registro-existente td {
+    color: #2e7d32;       /* Verde */
+    font-weight: 600;
+}
