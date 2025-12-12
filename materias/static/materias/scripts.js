@@ -33,10 +33,20 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 document.addEventListener('DOMContentLoaded', function () {
+
+    // Seleccionar todas las filas del cuerpo de la tabla
     const filas = document.querySelectorAll('table tbody tr');
 
     filas.forEach(fila => {
-        fila.classList.add('registro-existente');
+
+        // Tercera columna (índice 2) → campo semestre
+        const semestre = fila.children[2].innerText.trim();
+
+        // Si el campo semestre tiene contenido, se considera registro existente
+        if (semestre !== '') {
+            fila.classList.add('registro-existente');
+        }
     });
+
 });
 
