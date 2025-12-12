@@ -86,6 +86,7 @@ textarea:focus {
 
 /* ======== TABLA ======== */
 table {
+    webkit-text-fill-color: #c9fbbb;
     width: 100%;
     border-collapse: collapse;
     border-radius: 10px;
