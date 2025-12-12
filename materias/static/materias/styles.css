@@ -125,4 +125,14 @@ tr:hover {
     font-size: 14px;
 }
 /* ======== si exuste un registro  ======== */
+.semestre-1 {
+    color: green;
+    font-weight: bold;
+}
+
+.semestre-2 {
+    color: black;
+    font-weight: bold;
+} 
+
 
