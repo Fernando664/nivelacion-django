@@ -32,3 +32,11 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+document.addEventListener('DOMContentLoaded', function () {
+    const filas = document.querySelectorAll('table tbody tr');
+
+    filas.forEach(fila => {
+        fila.classList.add('registro-existente');
+    });
+});
+
