@@ -94,11 +94,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 
-<script>
-  document.querySelectorAll("table tbody tr").forEach(tr => {
-    const semestre = tr.children[4].textContent.trim();
 
-    if (semestre === "2025-1") tr.style.color = "BLUE";
-    if (semestre === "2025-2") tr.style.color = "green";
-  });
-</script>
