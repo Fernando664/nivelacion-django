@@ -1,6 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="es">
+    
 <head>
     <meta charset="UTF-8">
     <title>Registro de Materias del Semestre Actual</title>
@@ -90,7 +91,16 @@
 </div>
 
 <script src="{% static 'materias/scripts.js' %}"></script>
+    <script>
+  document.querySelectorAll("table tbody tr").forEach(tr => {
+    const semestre = tr.children[4].textContent.trim();
+
+    if (semestre === "2025-1") tr.style.color = "BLUE";
+    if (semestre === "2025-2") tr.style.color = "green";
+  });
+</script>
 </body>
+    
 <p>
     <a href="https://jigsaw.w3.org/css-validator/check/referer">
         <img style="border:0;width:88px;height:31px"
@@ -98,4 +108,5 @@
             alt="¡CSS Válido!" />
     </a>
 </p>
+    
 </html>
